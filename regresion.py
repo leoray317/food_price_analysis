@@ -26,7 +26,7 @@ for i in iris_y_pro:
     iris_y_list.append(i[0])
 
 iris_y = np.array(iris_y_list,dtype=int)
-'''
+
 print(combin.iloc[:,1:])
 
 #X2 = sm.add_constant(iris_X)
@@ -56,3 +56,4 @@ ture_line = list(y_test)
 plt.plot(predict_line, color=(255/255,100/255,100/255))
 plt.plot(ture_line, '--', color=(100/255,100/255,255/255))
 plt.show()
+'''
