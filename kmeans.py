@@ -36,4 +36,5 @@ for i in df.values:
 
 
 plt.scatter( name,volatility,c=model.labels_)
+plt.savefig('volatility.png')
 plt.show()

@@ -13,7 +13,7 @@ price=[]
 volumn=[]
 time=[]
 for i in df.values:
-    if i[3] == '草莓' and i[5] == '台北二':
+    if i[3] == '西瓜' and i[5] == '台北二':
         price.append(i[6])
         volumn.append(i[7])
         time.append(i[1])

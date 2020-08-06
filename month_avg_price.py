@@ -36,6 +36,7 @@ for m in month:
             area = []
             food = []
             code = []
+            area_code = []
             for i in df.values:
                 if i[1].split('.')[1] == m and i[3] == fa[1] and i[5] == fa[2]:
                     month_price.append(i[6]) 
@@ -44,8 +45,9 @@ for m in month:
                     area.append(i[5])
                     food.append(i[3])
                     code.append(fa[0])
+                    area_code.append(i[4])
             try:
-                month_avg_list.append([code[0],month_value[0],food[0],area[0],avg(month_price),avg(month_volumn)])
+                month_avg_list.append([code[0],month_value[0],food[0],area_code[0],area[0],avg(month_price),avg(month_volumn)])
                 #print([code[0],month_value[0],food[0],area[0],avg(month_price),avg(month_volumn)])
             except:
                 continue
@@ -53,6 +55,6 @@ for m in month:
 
 print(month_avg_list)
 
-month_avg_df = pd.DataFrame(month_avg_list,columns = ['產品區域碼','月份','品名','地區','均價','均量'])
+month_avg_df = pd.DataFrame(month_avg_list,columns = ['產品區域碼','月份','品名','地區碼','地區','均價','均量'])
 
 month_avg_df.to_csv('month_avd_price.csv',encoding = 'utf-8-sig',index = False)
